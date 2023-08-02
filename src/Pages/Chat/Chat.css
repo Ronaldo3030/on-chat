@@ -1,0 +1,89 @@
+.container-chat {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* linhas automáticas para header, espaço flexível para mensagens, linha automática para input */
+  height: 100vh; /* altura total da viewport */
+}
+
+.messages {
+  overflow: auto; 
+}
+
+.header-chat {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  background-color: #FEFEFE;
+}
+
+.infos-user {
+  display: flex;
+  gap: 13px;
+}
+
+.infos-user img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.infos-user .name {
+  color: #1E1E1E;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 175%;
+}
+
+.infos-user p {
+  color: #1E1E1E;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.messages {
+  background-color: #F4F4F4;
+}
+
+
+
+.input-chat input {
+  padding: 18px 24px;
+  background-color: #FEFEFE;
+  width: 100%;
+  height: 64px;
+  border-radius: 16px 16px 0px 0px;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+  outline: none;
+  transition: .1s;
+  border: 1.5px solid transparent;
+}
+.input-chat input:focus,
+.input-chat input:hover {
+  border-color: #7e1ed7;
+}
+.input-chat input:focus + .icon,
+.icon:hover{
+  color: #7e1ed7;
+}
+.input-chat{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-chat .icon{
+  position: absolute;
+  right: 25px;
+  transition: .1s;
+}
