@@ -110,9 +110,9 @@ const Home = (props) => {
     if (value === 'All') {
       setChats(allChats)
     } else if (value === 'Unread') {
-      setChats(chats.filter(chat => chat.new))
+      setChats(allChats.filter(chat => chat.new))
     } else {
-      setChats(chats.filter(chat => !chat.new))
+      setChats(allChats.filter(chat => !chat.new))
     }
   }
 
