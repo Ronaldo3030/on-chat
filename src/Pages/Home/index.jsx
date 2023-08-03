@@ -2,6 +2,7 @@ import './Home.css'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import CardChat from '../../Components/CardChat'
+import { Link } from 'react-router-dom'
 
 const Home = (props) => {
   const chats = [
@@ -66,7 +67,18 @@ const Home = (props) => {
       <div className="container-chats">
         <div className="chats">
           {chats.map((chat, index) => (
-            <CardChat newMessage={chat.new} key={index} name={chat.name} lastText={chat.lastText} time={chat.time} image={chat.image} />
+            <Link
+              to={`/chat?name=${encodeURIComponent(chat.name)}&lastText=${encodeURIComponent(chat.lastText)}&time=${encodeURIComponent(chat.time)}&image=${encodeURIComponent(chat.image)}`}
+              key={index}
+            >
+              <CardChat
+                newMessage={chat.new}
+                name={chat.name}
+                lastText={chat.lastText}
+                time={chat.time}
+                image={chat.image}
+              />
+            </Link>
           ))}
         </div>
       </div>
