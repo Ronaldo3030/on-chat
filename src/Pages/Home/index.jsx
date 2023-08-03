@@ -3,8 +3,10 @@ import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import CardChat from '../../Components/CardChat'
 import { Link } from 'react-router-dom'
+import { useChat } from '../../Components/ChatContext/ChatContext.js';
 
 const Home = (props) => {
+  const { setSelectedChat } = useChat();
   const chats = [
     {
       name: "groundsheetsTardies",
@@ -68,8 +70,9 @@ const Home = (props) => {
         <div className="chats">
           {chats.map((chat, index) => (
             <Link
-              to={`/chat?name=${encodeURIComponent(chat.name)}&lastText=${encodeURIComponent(chat.lastText)}&time=${encodeURIComponent(chat.time)}&image=${encodeURIComponent(chat.image)}`}
+              to={`/chat`}
               key={index}
+              onClick={() => setSelectedChat(chat)}
             >
               <CardChat
                 newMessage={chat.new}

@@ -4,21 +4,13 @@ import { BiSend } from 'react-icons/bi'
 import Message from '../../Components/Message'
 import io from "socket.io-client";
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useChat } from '../../Components/ChatContext/ChatContext.js';
 
 const socket = io.connect('http://localhost:3001')
 
 const Chat = (props) => {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const chatInfo = {
-    name: queryParams.get('name'),
-    lastText: queryParams.get('lastText'),
-    time: queryParams.get('time'),
-    image: queryParams.get('image')
-  };
-
-  console.log(chatInfo)
+  const { selectedChat } = useChat();
 
   const [message, setMessage] = useState('');
 
@@ -37,9 +29,9 @@ const Chat = (props) => {
           <IoIosArrowBack size={24} color='#7e1ed7' cursor='pointer' />
         </Link>
         <div className="infos-user">
-          <img src="https://github.com/ronaldo3030.png" alt="" />
+          <img src={selectedChat.image} alt="" />
           <div className="text-user">
-            <h4 className='name'>Name user</h4>
+            <h4 className='name'>{selectedChat.name}</h4>
             <p>Lorem ipsum</p>
           </div>
         </div>
