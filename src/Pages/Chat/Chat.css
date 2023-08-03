@@ -1,11 +1,11 @@
 .container-chat {
   display: grid;
-  grid-template-rows: auto 1fr auto; /* linhas automáticas para header, espaço flexível para mensagens, linha automática para input */
-  height: 100vh; /* altura total da viewport */
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 
 .messages {
-  overflow: auto; 
+  overflow: auto;
 }
 
 .header-chat {
@@ -48,9 +48,9 @@
 
 .messages {
   background-color: #F4F4F4;
+  padding: 8px 24px;
+  width: 100%;
 }
-
-
 
 .input-chat input {
   padding: 18px 24px;
@@ -68,21 +68,24 @@
   transition: .1s;
   border: 1.5px solid transparent;
 }
+
 .input-chat input:focus,
 .input-chat input:hover {
   border-color: #7e1ed7;
 }
-.input-chat input:focus + .icon,
-.icon:hover{
+
+.input-chat input:focus+.icon,
+.icon:hover {
   color: #7e1ed7;
 }
-.input-chat{
+
+.input-chat {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.input-chat .icon{
+.input-chat .icon {
   position: absolute;
   right: 25px;
   transition: .1s;

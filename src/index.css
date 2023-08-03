@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root{
+:root {
   --dark-white: #FEFEFE;
   --white: #F4F4F4;
   --black: #1E1E1E;
@@ -25,4 +25,47 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7E1ED7 #D2CCD8;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: #D2CCD8;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #D4CADF;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #D4CADF;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #7E1ED7;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #7E1ED7;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #7E1ED7;
+}
+
+svg{
+  color: #7e1ed7;
 }

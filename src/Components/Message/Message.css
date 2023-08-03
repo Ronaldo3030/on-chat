@@ -1,0 +1,49 @@
+.message{
+  display: grid;
+}
+
+.me{
+  justify-items: end;
+}
+
+.to{
+  justify-items: start;
+}
+
+.message .text {
+  display: inline-block;
+  word-break: break-word; /* Para que palavras longas se quebrem corretamente */
+  white-space: normal;
+  width: auto;
+  max-width: 80%;
+  padding: 16px 24px;
+  align-items: flex-start;
+  gap: 10px;
+  transition: .1s;
+}
+
+.me .text{
+  border-radius: 16px 16px 4px 16px;
+  background-color: #7e1ed71e;
+}
+.to .text{
+  border-radius: 16px 16px 16px 4px;
+  background: #ECEAEA;
+
+}
+.me .text:hover{
+  transform: translateX(-5px);
+}
+.to .text:hover{
+  transform: translateX(5px);
+}
+
+.message .time {
+  color: #1E1E1E;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+  margin-top: 8px;
+}

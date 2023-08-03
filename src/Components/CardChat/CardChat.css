@@ -1,0 +1,96 @@
+.card-chat {
+  padding: 16px 24px;
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+  border-radius: 24px;
+  transition: .2s ease-in-out;
+}
+
+.card-chat:hover {
+  background-color: #F4F4F4;
+}
+
+.card-chat .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-chat .image img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.card-chat .infos {
+  width: 100%;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.card-chat .infos .name {
+  overflow: hidden;
+  color: #1E1E1E;
+  text-overflow: ellipsis;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 175%;
+}
+
+.card-chat .infos .time {
+  color: #1E1E1E;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+
+.card-chat .infos .message {
+  display: inline-block;
+  white-space: nowrap;
+  width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #1E1E1E;
+}
+
+.new-message{
+  background-color: #7e1ed71a;
+}
+
+.new-message .message{
+  color: #7E1ED7 !important;
+}
+
+.infos .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.num-messages {
+  display: flex;
+  padding: 4px 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 50px;
+  background: #7E1ED7;
+  color: var(--white, #FEFEFE);
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+}
