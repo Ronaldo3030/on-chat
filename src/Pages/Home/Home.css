@@ -58,7 +58,16 @@
 
 .list-types .selected,
 .list-types li:hover {
-
   color: #FEFEFE;
   background: #7E1ED7;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search svg{
+  margin-left: 8px;
 }

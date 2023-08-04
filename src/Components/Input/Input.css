@@ -1,0 +1,22 @@
+.input-search {
+  opacity: 0;
+  transition: .4s;
+  transform: translateY(-120px);
+  z-index: 99;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 16px 16px 0 16px;
+  color: #000;
+  border: 1.5px solid #7e1ed7;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+  outline: none;
+}
+
+.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -5,6 +5,7 @@ import CardChat from '../../Components/CardChat'
 import { Link } from 'react-router-dom'
 import { useChat } from '../../Components/ChatContext/ChatContext.js';
 import { useState } from 'react'
+import Input from '../../Components/Input'
 
 const Home = (props) => {
   const { setSelectedChat } = useChat();
@@ -103,6 +104,7 @@ const Home = (props) => {
       image: "https://st.depositphotos.com/1004384/2579/i/600/depositphotos_25794457-stock-photo-beautiful-teen-girl-portrait.jpg"
     },
   ])
+  const [showSearch, setShowSearch] = useState(false)
 
   const changeChat = (value) => {
     setFilterChat(value)
@@ -116,12 +118,24 @@ const Home = (props) => {
     }
   }
 
+  const filterChatName = (name) => {
+    changeChat('All')
+    if(name){
+      setChats(allChats.filter(chat => chat['name'].includes(name)))
+    }else{
+      setChats(allChats)
+    }
+  }
+
   return (
     <div className='container'>
       <div className="container-header">
         <div className='icons'>
           <HiOutlineMenuAlt1 size={24} cursor={'pointer'} />
-          <BiSearch size={24} cursor={'pointer'} />
+          <div className='search'>
+            <Input onChange={filterChatName} type="text" showSearch={showSearch ? 'show' : ''} placeholder="Search for user" />
+            <BiSearch onClick={() => setShowSearch(!showSearch)} size={24} cursor={'pointer'} />
+          </div>
         </div>
         <ul className="list-types">
           <li className={filterChat === 'All' ? 'selected' : ''} onClick={() => changeChat('All')}>All</li>

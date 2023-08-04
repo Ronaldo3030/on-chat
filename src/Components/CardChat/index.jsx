@@ -13,7 +13,7 @@ const CardChat = ({ name, lastText, time, image, newMessage }) => {
         </div>
         <div className="left">
           <span className='time'>{time}</span>
-          <span className="num-messages">3</span>
+          {newMessage && <span className="num-messages">3</span>}
         </div>
       </div>
     </div>
