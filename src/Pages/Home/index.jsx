@@ -16,7 +16,69 @@ const Home = (props) => {
       lastText: "asdasdasd",
       time: "3:50 PM",
       image: "https://static4.depositphotos.com/1000824/337/i/450/depositphotos_3379507-stock-photo-man-in-sunglasses.jpg",
-      new: true
+      new: true,
+      chat: [
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Oi! Como você está?",
+          "horario": "2023-08-04T10:00:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Olá! Estou bem, obrigado. E você?",
+          "horario": "2023-08-04T10:05:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Também estou bem, obrigado por perguntar.",
+          "horario": "2023-08-04T10:10:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Que ótimo! Alguma novidade interessante?",
+          "horario": "2023-08-04T10:15:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Na verdade sim, acabei de voltar de uma viagem incrível.",
+          "horario": "2023-08-04T10:20:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Uau, deve ter sido incrível! Para onde você foi?",
+          "horario": "2023-08-04T10:25:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Visitei várias cidades na Europa: Paris, Roma, Barcelona...",
+          "horario": "2023-08-04T10:30:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Isso soa como um sonho! Adoraria visitar esses lugares.",
+          "horario": "2023-08-04T10:35:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Definitivamente recomendo. As paisagens eram deslumbrantes.",
+          "horario": "2023-08-04T10:40:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Vou começar a planejar minha viagem agora mesmo! 😄",
+          "horario": "2023-08-04T10:45:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Ótimo! Se precisar de dicas, estou aqui para ajudar.",
+          "horario": "2023-08-04T10:50:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Muito obrigado! Vou te procurar quando começar a planejar tudo.",
+          "horario": "2023-08-04T10:55:00"
+        }
+      ]
     },
     {
       name: "analogsThermophiles",
@@ -64,7 +126,69 @@ const Home = (props) => {
       lastText: "asdasdasd",
       time: "3:50 PM",
       image: "https://static4.depositphotos.com/1000824/337/i/450/depositphotos_3379507-stock-photo-man-in-sunglasses.jpg",
-      new: true
+      new: true,
+      chat: [
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Oi! Como você está?",
+          "horario": "2023-08-04T10:00:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Olá! Estou bem, obrigado. E você?",
+          "horario": "2023-08-04T10:05:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Também estou bem, obrigado por perguntar.",
+          "horario": "2023-08-04T10:10:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Que ótimo! Alguma novidade interessante?",
+          "horario": "2023-08-04T10:15:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Na verdade sim, acabei de voltar de uma viagem incrível.",
+          "horario": "2023-08-04T10:20:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Uau, deve ter sido incrível! Para onde você foi?",
+          "horario": "2023-08-04T10:25:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Visitei várias cidades na Europa: Paris, Roma, Barcelona...",
+          "horario": "2023-08-04T10:30:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Isso soa como um sonho! Adoraria visitar esses lugares.",
+          "horario": "2023-08-04T10:35:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Definitivamente recomendo. As paisagens eram deslumbrantes.",
+          "horario": "2023-08-04T10:40:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Vou começar a planejar minha viagem agora mesmo! 😄",
+          "horario": "2023-08-04T10:45:00"
+        },
+        {
+          "remetente": "groundsheetsTardies",
+          "mensagem": "Ótimo! Se precisar de dicas, estou aqui para ajudar.",
+          "horario": "2023-08-04T10:50:00"
+        },
+        {
+          "remetente": "analogsThermophiles",
+          "mensagem": "Muito obrigado! Vou te procurar quando começar a planejar tudo.",
+          "horario": "2023-08-04T10:55:00"
+        }
+      ]
     },
     {
       name: "analogsThermophiles",
@@ -120,9 +244,9 @@ const Home = (props) => {
 
   const filterChatName = (name) => {
     changeChat('All')
-    if(name){
+    if (name) {
       setChats(allChats.filter(chat => chat['name'].includes(name)))
-    }else{
+    } else {
       setChats(allChats)
     }
   }

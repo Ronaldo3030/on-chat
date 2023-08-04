@@ -22,6 +22,21 @@ const Chat = (props) => {
     socket.emit('send_message', { message })
   }
 
+  const convertDate = (dataHora) => {
+    const dataHoraObj = new Date(dataHora);
+    
+    const dia = String(dataHoraObj.getDate()).padStart(2, '0');
+    const mes = String(dataHoraObj.getMonth() + 1).padStart(2, '0');
+    const ano = dataHoraObj.getFullYear();
+    
+    const horas = String(dataHoraObj.getHours()).padStart(2, '0');
+    const minutos = String(dataHoraObj.getMinutes()).padStart(2, '0');
+    
+    const formatoConvertido = `${horas}:${minutos} de ${mes}/${dia}/${ano}`;
+    return formatoConvertido;
+}
+
+  console.log(selectedChat)
   return (
     <div className='container-chat'>
       <div className="header-chat">
@@ -37,9 +52,11 @@ const Chat = (props) => {
         </div>
       </div>
       <div className="messages">
-        <Message time='02:58 PM' user="me">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum distinctio repudiandae voluptate maxime optio voluptas sit provident nam libero eveniet quisquam qui dolore aspernatur ullam fugit, earum error at. Omnis?
-        </Message>
+        {selectedChat.chat && selectedChat.chat.map((chat, index) => (
+          <Message key={index} time={convertDate(chat.horario)} user={chat.remetente === selectedChat.name ? 'to' : 'me'}>
+            {chat.mensagem}
+          </Message>
+        ))}
       </div>
       <div className="input-chat">
         <input onChange={getMessage} type="text" placeholder='Type your message...' />
