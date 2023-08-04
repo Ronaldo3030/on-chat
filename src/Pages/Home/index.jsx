@@ -276,9 +276,9 @@ const Home = (props) => {
               onClick={() => setSelectedChat(chat)}
             >
               <CardChat
-                newMessage={chat.new}
+                newMessage={chat.chat}
                 name={chat.name}
-                lastText={chat.lastText}
+                lastText={chat.chat && chat.chat[chat.chat.length - 1].mensagem}
                 time={chat.time}
                 image={chat.image}
               />
